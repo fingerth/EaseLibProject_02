@@ -58,6 +58,9 @@ class EmptyThumState extends TransferState {
         } else {
             placeHolder = clipAndGetPlachHolder(targetImage, position);
         }
+//        if (placeHolder == null) {
+//            return;
+//        }
 
         final IProgressIndicator progressIndicator = config.getProgressIndicator();
         progressIndicator.attach(position, adapter.getParentItem(position));
