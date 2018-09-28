@@ -155,8 +155,10 @@ class EmptyThumState extends TransferState {
             clipSize[0] = originImage.getWidth();
             clipSize[1] = originImage.getHeight();
         }
-
-        clipTargetImage(targetImage, placeHolder, clipSize);
+        if (placeHolder != null) {
+            clipTargetImage(targetImage, placeHolder, clipSize);
+        }
+        //clipTargetImage(targetImage, placeHolder, clipSize);
         return placeHolder;
     }
 
